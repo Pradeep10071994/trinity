@@ -64,6 +64,7 @@
   background-color: #f1f1f1;
 }
 </style>
+
 </head>
 
 <body>
@@ -84,10 +85,12 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Gallery</a></li>
-          <li><a href="#blog">Blog</a></li>	
           <li><a href="#team">Team</a></li>
+            <li><a href="#video">Video</a></li>
+          <li><a href="#blog">Blog</a></li>	
           
-          <li><a href="#video">Video</a></li>
+          
+        
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -1065,60 +1068,138 @@ for (i = 0; i < coll.length; i++) {
       <div class="container">
 
         <header class="section-header">
-          <h3>Our Clients</h3>
+          <h3 style="color: white">Brands</h3><br><br>
         </header>
 
-        <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+        <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 0,
+              $SlideDuration: 5000,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 4,
+              $SlideWidth: 140,
+              $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:150px;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
         </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:150px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="img/bran1.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran2.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran3.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran4.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran5.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran6.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran7.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran8.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran9.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran10.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran11.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran12.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran13.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran14.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran15.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran16.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran17.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/bran18.jpg" />
+            </div>
+            <a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
 
       </div>
     </section><!-- #clients -->
 <!--==========================
       Portfolio Section
     ============================-->
-    <section id="blog"  class="section-bg"  style="background-color: black">
-      <div class="container">
-
-        <header class="section-header"><br>
-          <h3 class="section-title" style="color: white">Blog</h3> 
-        </header> <br><br>
-        <div class="row" style="    border-radius: 8px; background-color: white; opacity: 0.7; " >
-      <img src="img/blog.jpg" width="45%" height="300px;" style="border-radius: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <p style="width: 45%;" align="justify"><br><strong style="color: red;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computer Vision</strong><br><br>
-Life today is unimaginable without computers. Work entertainment,education or communication you cannot function without computers.Consequently doctors are seeing an increasing number of people reporting certain common symptoms of discomfort in the eye. Many who report these symptoms are being diagnosed with what has come to be known as CVS or computer Vision Syndrome.<br><br><a href="" style="color: #1560aa"><strong>Read more >></strong></a></p></div><br><br>
-<div class="row">
-<div style=" border-radius: 8px; background-color: white; opacity: 0.7; width: 45% ">
-
-       <img src="img/blog1.jpg" width="513px;" style="border-radius: 8px;"><br><br>
-       <p align="justify" style="color: black; width: 500px;"><strong style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Safe Diwali</strong><br><br>
-The most awaited festival of lights, sweets and crackers is round the corner. While everyone are excited and busy in the preparations, here are few things to keep in mind for a safe Diwali.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: #1560aa"><strong>Read more >></strong></a>
-</p>
- 
-       </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <div  style=" border-radius: 8px; background-color: white; opacity: 0.7;  width: 45%">
-       	 <img src="img/blog2.jpg" width="513px;" style="border-radius: 8px;"> <br><br>
-        <p align="justify" style="color: black; width: 500px;"><strong style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nothing can substitute Nature Just one pair</strong><br><br><br>
-Eyes, the window to the world deserves a bit more care than what it gets! It’s high time that we react and take care of the precious gift from God.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: #1560aa"><strong>Read more >></strong></a>
-</p>
-       </div>
-       
-</div> <br><br>
-   <div class="row" style="    border-radius: 8px; background-color: white; opacity: 0.7; " >
-      <img src="img/blog3.jpg" width="45%" height="272px;" style="border-radius: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <p style="width: 45%;" align="justify"><br><strong style="color: red;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nothing can substitute Nature Just one pair</strong><br><br>
-Good eye sight and clear vision plays a predominant role in a child's growth and development. In other words, poor eye sight might hinder with a child's physical, emotional and social well being. While people are aware that eyes are important, they often tend to overlook the problems, especially when it comes to children.<br><br><a href="" style="color: #1560aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Read more >></strong></a></p></div><br><br>
-      
-       
-      </div>
-    </section><!-- #portfolio -->
+    
 
     <section id="team">
       <div class="container">
@@ -1132,7 +1213,7 @@ Meet our team leaders and find out why we're passionate about what we do.</p>
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/1.jpg" class="img-fluid" alt="">
+              <img src="img/1.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>R Kumaran</h4>
@@ -1144,10 +1225,10 @@ Meet our team leaders and find out why we're passionate about what we do.</p>
 <div id="myModal6" class="modal6">
 
   <!-- Modal content -->
-  <div class="modal-content6" style="width: 550px; border-radius: 8px; background-color: #274261">
-    <span class="close6" style="color: black">&times;</span>
-    <p style="color: black; font-size: 18px; font-family: sans-serif; ">R Kumaran</p><hr>
-    <p align="justify" style="color: black; font-family: sans-serif;"  ><strong>R Kumaran started his career as Optometrist in Christian Fellowship Hospital Oddanchatram Dindugal, TN after Completing Optometry from CMCH Vellore TN in the year 1982. Then he has joined in an optical chain as an Optometrist in 1984 and retired in 2000 as a Professional Manager after serving for 17 long years. During his tenure he has trained many Optometrist and Sales force, who are now the pillars of many organization in India. By the Grace of God Almighty he has established Trinity Optics, Vision Therapy & Contact Lens Clinic at Porur Chennai in the year 2000. From there on, he has taken Trinity to newer heights where, Trinity Optics was later launched in Keelkatalai, Chennai (2009) and Kumananchavadi, Chennai (2011). He is also an Optometry Educator in CSI Kalyani Hospital Allied Health Science College from 2009. Crediting his experience of more than 30 years in this field, he has been given the post of General Secretary for The Optometric Association of Tamil Nanbargal by his fellow Optom’s since 2012. He is still charming and enthusiastic and is continuing his service in Trinity Optics.</strong></p>
+  <div class="modal-content6" style="width: 550px; border-radius: 8px; background-color: #1f1f1f">
+    <span class="close6" style="color: white">&times;</span>
+    <p style="color: white; font-size: 20px; font-family: sans-serif; ">R Kumaran</p><hr>
+    <p align="justify" style="color: white; font-family: sans-serif;"  ><strong>R Kumaran started his career as Optometrist in Christian Fellowship Hospital Oddanchatram Dindugal, TN after Completing Optometry from CMCH Vellore TN in the year 1982. Then he has joined in an optical chain as an Optometrist in 1984 and retired in 2000 as a Professional Manager after serving for 17 long years. During his tenure he has trained many Optometrist and Sales force, who are now the pillars of many organization in India. By the Grace of God Almighty he has established Trinity Optics, Vision Therapy & Contact Lens Clinic at Porur Chennai in the year 2000. From there on, he has taken Trinity to newer heights where, Trinity Optics was later launched in Keelkatalai, Chennai (2009) and Kumananchavadi, Chennai (2011). He is also an Optometry Educator in CSI Kalyani Hospital Allied Health Science College from 2009. Crediting his experience of more than 30 years in this field, he has been given the post of General Secretary for The Optometric Association of Tamil Nanbargal by his fellow Optom’s since 2012. He is still charming and enthusiastic and is continuing his service in Trinity Optics.</strong></p>
   </div>
 
 </div>
@@ -1186,7 +1267,7 @@ window.onclick = function(event) {
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/team1.png" class="img-fluid" alt="">
+              <img src="img/team1.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>K Samuel Livingstone</h4>
@@ -1199,10 +1280,10 @@ window.onclick = function(event) {
 <div id="myModal7" class="modal7">
 
   <!-- Modal content -->
-  <div class="modal-content7" style="width: 550px; border-radius: 8px; background-color: #274261">
-    <span class="close7" style="color: black">&times;</span>
-    <p style="color: black; font-size: 18px; font-family: sans-serif; ">K Samuel Livingstone</p><hr>
-    <p align="justify" style="color: black; font-family: sans-serif;"  ><strong>Samuel did his Bachelors in Optometry from Sri Ramachandra Medical College during the period (2007-2011).He is among the first very few in India who holds the prestigious Fellowship in British Dispensing Optics, UK and specializes in dispensing high standard and customized spectacles,with special interest for Pediatric dispensing. He has also completed his Fellowship in Vision therapy (FVT) from Sankara Nethralaya and has established a Binocular Vision clinic in Trinity Optics. He has expertise in diagnosing and managing eye muscle and co-ordination related disorders,especially related to computer use. He further moved on to complete his post-graduation (Maters in Optometry) from Manipal University during the period (2013-2015).Additionally, he has done his FIACLE (Fellowship in International Association of Contact lens Educators) in the year 2017. Currently he is an integral part of Trinity optics as a managing partner and a Consultant Optometrist. He is currently a Lecturer in Department of Optometry, Sri Ramachandra medical college and Research institute.</strong></p>
+  <div class="modal-content7" style="width: 550px; border-radius: 8px; background-color: #1f1f1f">
+    <span class="close7" style="color: white">&times;</span>
+    <p style="color: white; font-size: 18px; font-family: sans-serif; ">K Samuel Livingstone</p><hr>
+    <p align="justify" style="color: white; font-family: sans-serif;"  ><strong>Samuel did his Bachelors in Optometry from Sri Ramachandra Medical College during the period (2007-2011).He is among the first very few in India who holds the prestigious Fellowship in British Dispensing Optics, UK and specializes in dispensing high standard and customized spectacles,with special interest for Pediatric dispensing. He has also completed his Fellowship in Vision therapy (FVT) from Sankara Nethralaya and has established a Binocular Vision clinic in Trinity Optics. He has expertise in diagnosing and managing eye muscle and co-ordination related disorders,especially related to computer use. He further moved on to complete his post-graduation (Maters in Optometry) from Manipal University during the period (2013-2015).Additionally, he has done his FIACLE (Fellowship in International Association of Contact lens Educators) in the year 2017. Currently he is an integral part of Trinity optics as a managing partner and a Consultant Optometrist. He is currently a Lecturer in Department of Optometry, Sri Ramachandra medical college and Research institute.</strong></p>
   </div>
 
 </div>
@@ -1241,7 +1322,7 @@ window.onclick = function(event) {
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/team2.png" class="img-fluid" alt="">
+              <img src="img/team2.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>K Sheela Evangeline</h4>
@@ -1253,10 +1334,10 @@ window.onclick = function(event) {
 <div id="myModal8" class="modal8">
 
   <!-- Modal content -->
-  <div class="modal-content8" style="width: 550px; border-radius: 8px; background-color: #274261">
-    <span class="close8" style="color: black">&times;</span>
-    <p style="color: black; font-size: 18px; font-family: sans-serif; ">K Sheela Evangeline</p><hr>
-    <p align="justify" style="color: black; font-family: sans-serif;"  ><strong>Sheela completed her Bachelors in Optometry (2005-2009) and post-graduation in Optometry (2009-2011) from Elite School of Optometry, Sankara Nethralaya (BITS Pilani). She is also a fellow of the British Dispensing Optics, UK and has expertise in scientific dispensing. She worked as a consultant Optometrist and lecturer in optometry from the year 2011 to 2015. She is currently pursuing her PhD in Optometry & Vision science in Flinders University, Australia. Her research interests are Amblyopia (lazy eye) and Strabismus (crossed eye). She would soon join Trinity optics to take it to new horizons.</strong></p>
+  <div class="modal-content8" style="width: 550px; border-radius: 8px; background-color: #1f1f1f">
+    <span class="close8" style="color: white">&times;</span>
+    <p style="color: white; font-size: 18px; font-family: sans-serif; ">K Sheela Evangeline</p><hr>
+    <p align="justify" style="color: white; font-family: sans-serif;"  ><strong>Sheela completed her Bachelors in Optometry (2005-2009) and post-graduation in Optometry (2009-2011) from Elite School of Optometry, Sankara Nethralaya (BITS Pilani). She is also a fellow of the British Dispensing Optics, UK and has expertise in scientific dispensing. She worked as a consultant Optometrist and lecturer in optometry from the year 2011 to 2015. She is currently pursuing her PhD in Optometry & Vision science in Flinders University, Australia. Her research interests are Amblyopia (lazy eye) and Strabismus (crossed eye). She would soon join Trinity optics to take it to new horizons.</strong></p>
   </div>
 
 </div>
@@ -1295,7 +1376,7 @@ window.onclick = function(event) {
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team3.png" class="img-fluid" alt="">
+              <img src="img/team3.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>K Narendiran Karthick</h4>
@@ -1306,10 +1387,10 @@ window.onclick = function(event) {
 <div id="myModal9" class="modal9">
 
   <!-- Modal content -->
-  <div class="modal-content9" style="width: 550px; border-radius: 8px; background-color: #274261">
-    <span class="close9" style="color: black">&times;</span>
-    <p style="color: black; font-size: 18px; font-family: sans-serif; ">K Narendiran Karthick</p><hr>
-    <p align="justify" style="color: black; font-family: sans-serif;"  ><strong>K Narendiran has been a part of Trinity Optics right from its inception. He has been trained and certified from Essilor India exclusively in Ophthalmic lens fitting and dispensing. He has over 15 years of experience in Trinity Optics and has been heading the Opticals and Trinity Rx Lab. He is an expert in all kinds of spectacle mounting and fitting. He has trained many budding technicians and is paving the way for giving the best finished spectacles to our clients.</strong></p>
+  <div class="modal-content9" style="width: 550px; border-radius: 8px; background-color: #1f1f1f">
+    <span class="close9" style="color: white">&times;</span>
+    <p style="color: white; font-size: 18px; font-family: sans-serif; ">K Narendiran Karthick</p><hr>
+    <p align="justify" style="color: white; font-family: sans-serif;"  ><strong>K Narendiran has been a part of Trinity Optics right from its inception. He has been trained and certified from Essilor India exclusively in Ophthalmic lens fitting and dispensing. He has over 15 years of experience in Trinity Optics and has been heading the Opticals and Trinity Rx Lab. He is an expert in all kinds of spectacle mounting and fitting. He has trained many budding technicians and is paving the way for giving the best finished spectacles to our clients.</strong></p>
   </div>
 
 </div>
@@ -1364,7 +1445,41 @@ window.onclick = function(event) {
 
       </div>
     </section><!-- #portfolio -->
+<section id="blog"  class="section-bg"  style="background-color: black">
+      <div class="container">
 
+        <header class="section-header"><br>
+          <h3 class="section-title" style="color: white">Blog</h3> 
+        </header> <br><br>
+        <div class="row" style="    border-radius: 8px; background-color: white; opacity: 0.7; " >
+      <img src="img/blog.jpg" width="45%" height="300px;" style="border-radius: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p style="width: 45%;" align="justify"><br><strong style="color: red;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computer Vision</strong><br><br>
+Life today is unimaginable without computers. Work entertainment,education or communication you cannot function without computers.Consequently doctors are seeing an increasing number of people reporting certain common symptoms of discomfort in the eye. Many who report these symptoms are being diagnosed with what has come to be known as CVS or computer Vision Syndrome.<br><br><a href="" style="color: #1560aa"><strong>Read more >></strong></a></p></div><br><br>
+<div class="row">
+<div style=" border-radius: 8px; background-color: white; opacity: 0.7; width: 45% ">
+
+       <img src="img/blog1.jpg" width="513px;" style="border-radius: 8px;"><br><br>
+       <p align="justify" style="color: black; width: 500px;"><strong style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Safe Diwali</strong><br><br>
+The most awaited festival of lights, sweets and crackers is round the corner. While everyone are excited and busy in the preparations, here are few things to keep in mind for a safe Diwali.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: #1560aa"><strong>Read more >></strong></a>
+</p>
+ 
+       </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <div  style=" border-radius: 8px; background-color: white; opacity: 0.7;  width: 45%">
+       	 <img src="img/blog2.jpg" width="513px;" style="border-radius: 8px;"> <br><br>
+        <p align="justify" style="color: black; width: 500px;"><strong style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nothing can substitute Nature Just one pair</strong><br><br><br>
+Eyes, the window to the world deserves a bit more care than what it gets! It’s high time that we react and take care of the precious gift from God.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: #1560aa"><strong>Read more >></strong></a>
+</p>
+       </div>
+       
+</div> <br><br>
+   <div class="row" style="    border-radius: 8px; background-color: white; opacity: 0.7; " >
+      <img src="img/blog3.jpg" width="45%" height="272px;" style="border-radius: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p style="width: 45%;" align="justify"><br><strong style="color: red;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nothing can substitute Nature Just one pair</strong><br><br>
+Good eye sight and clear vision plays a predominant role in a child's growth and development. In other words, poor eye sight might hinder with a child's physical, emotional and social well being. While people are aware that eyes are important, they often tend to overlook the problems, especially when it comes to children.<br><br><a href="" style="color: #1560aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Read more >></strong></a></p></div><br><br>
+      
+       
+      </div>
+    </section><!-- #portfolio -->
     <!--==========================
       Contact Section
     ============================-->
